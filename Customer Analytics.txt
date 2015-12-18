@@ -1,0 +1,168 @@
+Customer Analytics
+
+Predictive Analytics: RFM
+- recency: how recently they made a purchase, last time 
+- frequency: how many
+- monetary value: overall monetary value
+
+These three are used for future prediciton in regression modeling. For period 2 , regression models sufficient.
+
+For customer acquisition and CLV, need to project way into future. Can roll over period to period but that is limited. With no data to use as input, then can't 
+predict the output. For when / long-run type questions.
+
+Regression for next period churn - not for outside range of data. 
+
+Customer Lifetime value:
+
+Notes :
+
+Look at customers on a chohort basis: acquired around same time , through same channel, same campaign or same first purchase with the company.
+Customers doing things or not doing things over a period of time. Using a product, coming into store, etc. 
+
+RFM : recency more important than frequency moe important than monetary value.
+
+No action could mean: 
+- lapsed: leaving the pool of customers
+- dormant: decided against it for a period
+Need a model to determine which. Based on recency and frequency we can make an educated guess about probability of lapsing and decide where to devote resources.
+Based on best guessof proabilty of death and propensity to donate- get expected frequency of future donations.
+Note: recency limited to most recent period of consideration.
+
+Probability model
+
+- each person has a proabilty model for their behaviour 
+- bayesian ? Beta Distribution- can capture range of probaility functions of donation, death coin- lapsing
+- likelihood of lapsing and likelihood of dormance
+- heterogeneity for both - don't overgeneralize
+
+Buy till you die model: see links for how to implement these models
+- short term: regression model
+
+
+Prescriptive Analytics
+
+Descriptive: map data to patterns
+Predictive: take data on past behvaiour and predict future behaviour
+Prescriptive: give a recommendation
+
+Problem definition: 
+- set of goals: maximize volume sold or revenue, profit
+- set of actions that may be taken: change price, 
+- model that describes how actions impact the goal: regression model , or other
+
+Tradeoff: in most models best to identify tradeoff beforehand
+
+Introducting Parameters in model
+- introducing costs : look for marginal revenue vs marginal cost
+- optimal when MR = MC
+
+Market Structure:
+- single customer vs multiple
+- price elasticities
+- what are other competitors doing when we change price ?
+- WTP: willing to pay per item
+	take increase in revenue at a given price / 0.5
+- with single customer consider offering a bundle at a given price: look at what they are willing to pay per item and match that
+- with multiple consumers all buying one item, focus on volume is correct
+
+strategic interaction: in game theory deals with how to respond to competitve moves
+
+Online Advertising: 
+- attribution: using clickthrough rate to see proportion of customers who clicked through
+	- # channels ad shown to consumer
+	- clickthrough % of customers who clicked the ad
+	- consumer theory and industrial organization
+
+
+Martketing Analytics:
+- build infrastructure to get data
+- exploration: basic 
+- prediction: customer analytics
+- optimizing future: pricing, emailing, discounting for optimization
+- business action:
+
+Judge the value of customers by cost to serve individual customers. Make profit one customer at a time.
+
+Customer analytics: colleciton, management, analysis and strategic leverage of an organization's granular data about the behaviour of its customers.
+- inherently granular: focus on individual level
+- behavioural: focus on observed behavioural pattern(s), not demographics or attitudes
+- forward looking: orientation toward prediction - not jsut description
+- multi-platform: combine behavours frommultiple measurement systems
+- broadly applicable: industry agnostic view of "customer"
+- multidisciplinary: marketing, statistics, computer science, info sci, OR
+
+note: focus on past behaviour over stated intention data
+
+WEBSITE
+wcai.wharton.upenn.edu : more on customer analytics applied 
+
+Effect of individual level prices on catalog shopping behaviour?
+Impact of frequency and timing of catalogs/mailers on purchase behaviour ?
+How does product assortment influence household purchase behaviour ? 
+What types of advertising appeals/messages are more/less effective ?
+
+Need to link offline and online purchase and customer data.
+
+Problems:
+
+Advertising Attribution problem: how effective is display (long-term) vs SEM (short-term) digital advertising
+- current practice is last click
+
+How do customers utilize multiple media platforms? (cannibalization?)
+- media optimization or channel cannibalization problem
+
+GRP: reach * frequency
+- gross rating points: more GRPs more they can charge for advertising 
+- reach: as many customers
+- freq: volume of content
+
+Findings:
+- Channels don't cannibalize each other long run as heavy users for each don't decrease
+- channels do slightly cannibalize each other on a given day
+- total engagement goes up- mobile + online
+
+How valuable are price discounts?
+- 2/3 of value comes from person the discount is offered to but 1/3 comes from the people they interact with after the promotion is offered to them.
+- Can track social media data to figure out the impact on who they talked to and where/when they talked to them
+
+What is the ROI of Facebook?
+- likes/ mentions ?
+- Regression inputs: online exposure to banner ads, exposure to TV ads of same brand, invitation from friend to like the page and seeing it in someone's status
+  					-> purchase: the person in question buys brand
+
+Facebook and Online have greater short-term effects
+TV has longer carry-over
+- whe comparing to cost markets are efficient- the total integrated impact over time is proportional to cost
+
+New Datasets:
+- shopping plan: unplanned purchases
+- shopping path: where in store, shelfspace
+- field of vision
+- spatial data on where customers go in-store
+
+Five steps for TSP:
+- do you want efficient shoppers or wanderers?
+1. data:new data
+2. manage:heat maps to analyze
+3. analyze: analyze under TSP framework
+4. action:who to target?
+5. business decision
+
+Order deviation and Travel deviation: inefficeint order of purchasing and inefficint route -> wanderers spend more on average
+- then need demographics to segment and target the exact customer
+
+Recall and consideration impacted by views but choice less so. 
+
+Data capture, Analysis, prediction and action
+
+CLV = sum T m*( (r^t)/ (1+d)^t )
+
+Call Ordering: routing to better customer service reps based on the client's tone.
+
+Technology meets management science. Real monetization.
+
+Data: infrastrueture to collect right data
+Data exploration: figure out what you're looking for. Things model might not show
+Prediction: churn modeling and lifetime value
+Optimization: who to advertise , set price, who to contact via email 
+Decisions: amazon prime - getting product to nearby warehouses pre purchase
